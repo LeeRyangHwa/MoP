@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cosmoslab.example.com.ClubMultiTracking">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Etc.GlobalVariable"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MoP"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.SignupActivity" />
+        <activity
+            android:name=".Activity.ClubListActivity"
+            android:label="@string/title_activity_club_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.MyPageActivity" />
+        <activity
+            android:name=".Activity.ClubMainActivity"
+            android:label="@string/title_activity_club_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.AddClubListActivity" />
+        <activity android:name=".Fragment.Fragment1" />
+        <activity android:name=".Fragment.Fragment2" />
+        <activity android:name=".Fragment.Fragment3" />
+        <activity android:name=".Fragment.Fragment4" />
+        <activity android:name=".Fragment.Fragment5" />
+        <activity android:name=".Activity.AddScheduleActivity" />
+        <activity android:name=".Activity.ContentActivity" />
+        <activity android:name=".Activity.WriteActivity" />
+    </application>
+
+</manifest>

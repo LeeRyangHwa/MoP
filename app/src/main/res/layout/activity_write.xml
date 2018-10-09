@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WriteActivity">
+    <LinearLayout
+        android:id="@+id/linearlayout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="등          록"
+            android:textSize="21sp"
+            android:textColor="@color/colorPrimary"
+            android:onClick="onButton2Clicked"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/linearlayout_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout_3">
+
+        <EditText
+            android:maxLength="10"
+
+            android:id="@+id/et_id"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Name(10)"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="43dp" />
+
+        <EditText
+            android:maxLength="10"
+
+            android:id="@+id/et_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="PW(10)"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/linearlayout_1"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout_1">
+
+        <EditText
+            android:maxLength="20"
+
+            android:id="@+id/et_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:hint="제목 입력[20]"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="30dp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="85dp" />
+        <EditText
+            android:maxLength="50"
+
+            android:id="@+id/et_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="50"
+            android:hint="내용입력[50]"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="85dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cosmoslab.example.com.ClubMultiTracking.Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_images"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginLeft="115dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/white_greyish"
+            app:civ_border_width="2dp"
+            android:layout_weight="0.39" />
+
+        <EditText
+            android:id="@+id/et_lnmobioe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="Mobile"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"/>
+
+
+        <EditText
+            android:id="@+id/et_lnpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"/>
+
+
+        <CheckBox
+            android:id="@+id/show_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="비밀번호 보이기"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_login"
+            android:text="로그인"
+            android:background="@color/title_bg"
+            android:textColor="@color/white_greyish" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_signup"
+            android:text="회원가입"
+            android:background="@color/title_bg"
+            android:textColor="@color/white_greyish" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
