@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="Fragment.Fragment5"
-    tools:showIn="@layout/fragment5">
+    tools:context="Fragment.Fragment4"
+    tools:showIn="@layout/fragment4">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"

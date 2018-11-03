@@ -32,9 +32,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="phone"
-            android:hint="Mobile"
+            android:hint="핸드폰 번호"
             android:textColor="@color/black"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/background"/>
 
 
         <EditText
@@ -43,9 +43,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
-            android:hint="Password"
+            android:hint="비밀번호"
             android:textColor="@color/black"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/background"/>
 
 
         <CheckBox
