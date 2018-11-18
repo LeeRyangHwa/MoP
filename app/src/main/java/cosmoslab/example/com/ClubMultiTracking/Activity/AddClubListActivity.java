@@ -35,8 +35,6 @@ public class AddClubListActivity extends AppCompatActivity {
     private EditText edt_name, edt_introduce, edt_interest;
     Intent intent;
 
-    //private static String MAKECLUB_URL = "http://54.180.67.243/TestLogin/PutClubInfo.jsp";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

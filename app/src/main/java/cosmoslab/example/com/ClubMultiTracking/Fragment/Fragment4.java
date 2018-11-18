@@ -270,7 +270,6 @@ public class Fragment4 extends Fragment {
         //데이터를 파싱
         requestQueue.add(postRequest);
 
-
     }
 
 

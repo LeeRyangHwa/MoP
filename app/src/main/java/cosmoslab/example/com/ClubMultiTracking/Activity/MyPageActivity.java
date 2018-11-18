@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +36,7 @@ public class MyPageActivity extends AppCompatActivity {
     private String userID;
     private String IDinfo;
     private String userinfo[];
-    private TextView tv_id, tv_hobby, tv_email, tv_setup, tv_clublist;
+    private TextView tv_id, tv_mobile, tv_email, tv_setup, tv_clublist;
 
     private GlobalVariable globalVariable;
 
@@ -57,7 +56,7 @@ public class MyPageActivity extends AppCompatActivity {
         globalVariable.setUserID(userID);
 
         tv_id = (TextView) findViewById(R.id.IDtext);
-        tv_hobby = (TextView) findViewById(R.id.hobby);
+        tv_mobile = (TextView) findViewById(R.id.mobile);
         tv_email = (TextView) findViewById(R.id.userEmail);
         //tv_setup = (TextView) findViewById(R.id.usersetup);
         tv_clublist = (TextView) findViewById(R.id.clublist);
@@ -65,14 +64,11 @@ public class MyPageActivity extends AppCompatActivity {
         try {
             CustomTask task = new CustomTask();
 
-            Log.i("ID_전달", userID);
             IDinfo = task.execute(userID).get();
-            Log.i("ID정보", IDinfo);
             userinfo = (IDinfo.split("/"));
-            Log.i("userinfo", "IDinfo나누기.");
 
             tv_id.setText(userinfo[0]);
-            tv_hobby.setText(userinfo[1]);
+            tv_mobile.setText(globalVariable.getUserID());
             tv_email.setText(userinfo[2]);
 
             arraycopy(userinfo, 3, globalVariable.getMyClubLIst(), 0, 4);
@@ -169,11 +165,9 @@ public class MyPageActivity extends AppCompatActivity {
                         buffer.append(str);
                     }
                     receiveMsg = buffer.toString();
-
                 } else {
                     Log.i("통신 결과", conn.getResponseCode() + "에러");
                 }
-
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {

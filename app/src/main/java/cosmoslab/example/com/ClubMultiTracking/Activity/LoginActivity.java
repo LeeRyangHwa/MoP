@@ -40,13 +40,15 @@ public class LoginActivity extends AppCompatActivity {
     private String login_url;
     private String ID;
 
+    GlobalVariable globalVariable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
-        GlobalVariable globalVariable = (GlobalVariable) getApplicationContext();
+        globalVariable = (GlobalVariable) getApplicationContext();
         login_url = globalVariable.getIpUrl() + "/TestLogin/User.jsp";
 
         edt_login = (EditText) findViewById(R.id.et_lnmobioe);
@@ -150,6 +152,8 @@ public class LoginActivity extends AppCompatActivity {
                         //intent에 넣는다.
                         Intent intent = new Intent(LoginActivity.this, MyPageActivity.class);
                         intent.putExtra("ID", ID);
+
+                        globalVariable.setLoginCheck(true);
                         /*intent.putExtra("name",jsonObjectInfo.getString("name"));
                         intent.putExtra("email",jsonObjectInfo.getString("email"));
                         intent.putExtra("mobile",jsonObjectInfo.getString("mobile"));*/
