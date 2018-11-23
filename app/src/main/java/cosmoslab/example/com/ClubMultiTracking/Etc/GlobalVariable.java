@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class GlobalVariable extends Application {
 
     private String clubName;//동호회 이름
-    private String ipUrl = "http://54.180.67.243";
+    private String ipUrl = "http://192.168.0.7:8080";
     private String userID;
     private String[] myClubLIst = new String[4];
     private boolean loginCheck;
